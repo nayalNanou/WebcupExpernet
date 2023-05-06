@@ -4,6 +4,8 @@
     margin: auto;
 
     --border-color: #EFEFEF;
+
+    margin-top: 200px;
 }
 
 .div-header-discover-onirix {
@@ -11,6 +13,7 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    margin-bottom: 20px;
 }
 
 .div-header-discover-onirix div {
@@ -25,7 +28,7 @@
     min-height: 220px;
 }
 
-.div-header-discover-onirix .text p {
+.div-header-discover-onirix .container-text-discover p {
     font-size: 3em;
     text-align: center;
 }
@@ -57,10 +60,14 @@ section p {
 }
 
 .container-prediction {
-    min-height: 400px;
+    min-height: 200px;
 }
 
 .prediction-result {
     font-size: 1.8em;
     line-height: 1.6em;
+}
+
+.navbar-dark {
+    background: #00002F;
 }

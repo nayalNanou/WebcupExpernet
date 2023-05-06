@@ -9,9 +9,6 @@ const messageDisplaySpeed = 30;
 const animation = new Animation();
 
 dream.addEventListener('keypress', function(e) {
-// dreamForm.addEventListener('submit', function(e) {
-//    e.preventDefault();
-
     predictionResult.innerHTML = "";
 
     if (e.keyCode == 13) {

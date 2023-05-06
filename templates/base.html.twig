@@ -29,6 +29,7 @@
 
         <!-- Template Stylesheet -->
         <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+
         {% block stylesheets %}
         {% endblock %}
     </head>
@@ -41,8 +42,8 @@
                 <div class="row gx-5">
                     <div class="col-lg-4 col-md-6 footer-about">
                         <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-4">
-                            <a href="index.html" class="navbar-brand">
-                                <h1 class="m-0 text-white"><a href="index.html">
+                            <a href="{{ path('home_index') }}" class="navbar-brand">
+                                <h1 class="m-0 text-white"><a href="{{ path('home_index') }}">
                                     <img src="{{ asset('img/Logo-IIR.png') }}" style="width: 250px;height: 75px;">
                                 </a></h1>
                             </a>
@@ -119,7 +120,7 @@
                             <p class="mb-0">&copy; <a class="text-white border-bottom" href="#">Institut Internationale des Rêves</a>. Tout droit reservés. 
                             
                             <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                            <a class="text-white border-bottom" href="https://htmlcodex.com">Mentions légale</a><br/>
+                            <a class="text-white border-bottom" href="https://htmlcodex.com">Mentions légales</a><br/>
                             <a class="text-white border-bottom" href="https://htmlcodex.com">Politique de confidentialité</a>
                         </p>
                         </div>

@@ -12,11 +12,6 @@ class HomeController extends AbstractController
     #[Route("/", name: "index")]
     public function index(OpenaiManager $openaiManager)
     {
-
-//        $result = $openaiManager->generateOfferContent();
-
-  //      dump($result);
-
         return $this->render('homepage.html.twig');
     }
 }

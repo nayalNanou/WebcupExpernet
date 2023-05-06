@@ -34,6 +34,7 @@
 
     <!-- Navbar Start -->
     <div class="container-fluid position-relative p-0">
+{#
         <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
             <a href="index.html">
                 <img src="{{ asset('img/iit-logo.png') }}" style="width: 250px;height: 75px;">
@@ -69,15 +70,17 @@
 
                 <a href="https://htmlcodex.com/startup-company-website-template" class="btn btn-primary py-2 px-4 ms-3">ONIRIX</a>            </div>
         </nav>
+#}
 
+        {{ include('_navbar.html.twig') }}
 
         <div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
             <div class="row py-5">
                 <div class="col-12 pt-lg-5 mt-lg-5 text-center">
-                    <h1 class="display-4 text-white animated zoomIn">About Us</h1>
-                    <a href="" class="h5 text-white">Home</a>
+                    <h1 class="display-4 text-white animated zoomIn">A propos de nous</h1>
+                    <a href="{{ path('home_index') }}" class="h5 text-white">Accueil</a>
                     <i class="far fa-circle text-white px-2"></i>
-                    <a href="" class="h5 text-white">About</a>
+                    <a href="{{ path('about_index') }}" class="h5 text-white">A propos de nous</a>
                 </div>
             </div>
         </div>
@@ -110,18 +113,29 @@
             <div class="row g-5">
                 <div class="col-lg-7">
                     <div class="section-title position-relative pb-3 mb-5">
-                        <h5 class="fw-bold text-primary text-uppercase">About Us</h5>
-                        <h1 class="mb-0">The Best IT Solution With 10 Years of Experience</h1>
+                        <h5 class="fw-bold text-primary text-uppercase">QUI SOMMES-NOUS ?</h5>
+                        <h1 class="mb-0">Institut de recherche entièrement spécialisé et entièrement dédiée dans la recherche en onirologie</h1>
                     </div>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor eirmod magna dolore erat amet</p>
+                    <p class="mb-4">Conscient des métamorphoses du monde actuel, l’Institut International des Rêves vise à comprendre nos rêves pour changer le présent et aller vers la construction d’un avenir désirable. Créé en 2010, l’IRR et ses équipes de recherche travaillent à la compréhension : </p>
+                        <ul>
+                        <li>de la genèse d’un rêve</li>
+                        <li>du profilage des rêveurs</li>
+                        <li>des possibilités d’interactions présent / avenir </li>
+                        </ul>
+                    <p>
+                        L’Institut International des Rêves est une organisation hybride et indépendante au service de l’intérêt général. Il dispose d’un Conseil d’Administration, composé notamment de membres de l’institut et de représentants élus. Il prend les décisions importantes de l'organisation.
+                    </p>
                     <div class="row g-0 mb-3">
                         <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
-                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Award Winning</h5>
-                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Professional Staff</h5>
+                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Expert en onirologie</h5>
+                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Expert en psychologie</h5>
                         </div>
                         <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
-                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>24/7 Support</h5>
-                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Fair Prices</h5>
+                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Expert en anthropologie</h5>
+                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Expert en neurologie</h5>
+                        </div>
+                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
+                            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Expert en intelligence artificielle</h5>
                         </div>
                     </div>
                     <div class="d-flex align-items-center mb-4 wow fadeIn" data-wow-delay="0.6s">
@@ -129,12 +143,11 @@
                             <i class="fa fa-phone-alt text-white"></i>
                         </div>
                         <div class="ps-4">
-                            <h5 class="mb-2">Call to ask any question</h5>
-                            <h4 class="text-primary mb-0">+012 345 6789</h4>
+                            <h5 class="mb-2">Appellez-nous pour toutes</h5>
+                            <h4 class="text-primary mb-0" href="href=tel:0782465607"> 07 82 46 56 07</h4>
                         </div>
                     </div>
-                    <a href="quote.html" class="btn btn-primary py-3 px-5 mt-3 wow zoomIn" data-wow-delay="0.9s">Request A Quote</a>
-                </div>
+                   </div>
                 <div class="col-lg-5" style="min-height: 500px;">
                     <div class="position-relative h-100">
                         <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="{{ asset('img/about.jpg') }}" style="object-fit: cover;">
@@ -150,8 +163,8 @@
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-                <h5 class="fw-bold text-primary text-uppercase">Team Members</h5>
-                <h1 class="mb-0">Professional Stuffs Ready to Help Your Business</h1>
+                <h5 class="fw-bold text-primary text-uppercase">Nos experts</h5>
+                <h1 class="mb-0">Professionnel, chercheurs, psychologues, ingérieurs etc..</h1>
             </div>
             <div class="row g-5">
                 <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
@@ -159,15 +172,15 @@
                         <div class="team-img position-relative overflow-hidden">
                             <img class="img-fluid w-100" src="{{ asset('img/team-1.jpg') }}" alt="">
                             <div class="team-social">
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-twitter fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-instagram fw-normal"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
+                            <a class="btn btn-lg btn-primary btn-lg-square rounded" href="https://twitter.com"><i class="fab fa-twitter fw-normal"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href="https://www.facebook.com/"><i class="fab fa-facebook-f fw-normal"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href="https://www.instagram.com/"><i class="fab fa-instagram fw-normal"></i></a>
+                                <a class="btn btn-lg btn-primary btn-lg-square rounded" href="https://www.linkedin.com/"><i class="fab fa-linkedin-in fw-normal"></i></a>
                             </div>
                         </div>
                         <div class="text-center py-4">
-                            <h4 class="text-primary">Full Name</h4>
-                            <p class="text-uppercase m-0">Designation</p>
+                            <h4 class="text-primary">Angel S. Myrick</h4>
+                            <p class="text-uppercase m-0">onirologue</p>
                         </div>
                     </div>
                 </div>
@@ -183,8 +196,8 @@
                             </div>
                         </div>
                         <div class="text-center py-4">
-                            <h4 class="text-primary">Full Name</h4>
-                            <p class="text-uppercase m-0">Designation</p>
+                            <h4 class="text-primary">Erica J. Walker</h4>
+                            <p class="text-uppercase m-0">Psychologue</p>
                         </div>
                     </div>
                 </div>
@@ -200,8 +213,8 @@
                             </div>
                         </div>
                         <div class="text-center py-4">
-                            <h4 class="text-primary">Full Name</h4>
-                            <p class="text-uppercase m-0">Designation</p>
+                            <h4 class="text-primary">Charles M. Stokes</h4>
+                            <p class="text-uppercase m-0">Professeur en onirologie</p>
                         </div>
                     </div>
                 </div>
@@ -211,8 +224,38 @@
     <!-- Team End -->
 
 
+
+    <!-- Team Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                <h5 class="fw-bold text-primary text-uppercase">NOS PROJETS DE RECHERCHE</h5>
+                <h1 class="mb-0">Nos chercheurs ont oeuvré dans l'aboutissement de différents projets innovents</h1>
+            </div> 
+            <ul style="display: flex; justify-content: space-around">
+                <li>
+                    <a href="https://htmlcodex.com/startup-company-website-template" class="btn btn-primary py-2 px-4 ms-3">ONIRIX</a>
+                </li>
+                <li>
+                    <a href="https://htmlcodex.com/startup-company-website-template" class="btn btn-primary py-2 px-4 ms-3">FUTURLAB</a>
+                </li>
+                <li>
+                    <a href="https://htmlcodex.com/startup-company-website-template" class="btn btn-primary py-2 px-4 ms-3">EXPANSEDREAM</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- Team End -->
+    
+    
+
+
     <!-- Vendor Start -->
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                <h5 class="fw-bold text-primary text-uppercase">Nos partenaires</h5>
+                <h1 class="mb-0">Nos artenaires expert dans les domaines de l'IA et l'onirologie</h1>
+            </div>
         <div class="container py-5 mb-5">
             <div class="bg-white">
                 <div class="owl-carousel vendor-carousel">

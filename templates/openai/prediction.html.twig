@@ -1,36 +1,42 @@
 {% extends 'base.html.twig' %}
 
 {% block stylesheets %}
+    {{ parent() }}
+
     <link rel="stylesheet" href="{{ asset('css/openai.css') }}" />   
 {% endblock %}
 
-{% block javascripts %}
-    <script src="{{ asset('js/openai.js') }}"></script>
-{% endblock %}
-
 {% block body %}
-    <header>
-        <div>
-            <p>Découvrez notre IA ONIRIX</p>
+    {{ include('_navbar.html.twig') }}
+
+    <div id="page-generate-prediction">
+        <div class="div-header-discover-onirix">
+            <div class="container-text-discover">
+                <p>Découvrez notre IA ONIRIX</p>
+            </div>
+            <div class="container-logo">
+                <img src="{{ asset('images/onirix2.png') }}" alt="openai logo" class="openai-logo" />
+            </div>
         </div>
-        <div>
-            <img src="{{ asset('images/onirix.png') }}" alt="openai logo" class="openai-logo" />
+
+        <section>
+            <p>95% de nos statisques se sont réalisé. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut cursus auctor diam, vitae pellentesque sem condimentum eu.</p>
+
+            <p>Générer une prédiction à partir d'un rêve</p>
+
+            <form class="dream-form" id="dream-form" method="post" action="">
+                <textarea placeholder="Je rêvais j'étais sur une île deserte..." class="dream-textarea" name="dream" id="dream"></textarea>
+            </form>
+        </section>
+
+        <div class="container-prediction" id="prediction">
+            <p class="prediction-result" id="prediction-result"></p>
         </div>
-    </header>
-
-    <section>
-        <p>95% de nos statisques se sont réaliser</p>
-
-        <p>Générer une prédiction à partir d'un rêve</p>
-
-        <form id="dream-form" method="post" action="">
-            <textarea name="dream" id="dream"></textarea>
-            <button type="submit">Générer</button>
-        </form>
-    </section>
-
-    <div id="prediction">
-        <p id="prediction-result"></p>
     </div>
 {% endblock %}
 
+{% block javascripts %}
+    {{ parent() }}
+
+    <script type="module" src="{{ asset('js/openai.js') }}"></script>
+{% endblock %}

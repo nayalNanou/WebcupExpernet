@@ -34,6 +34,7 @@
 
     <!-- Navbar Start -->
     <div class="container-fluid position-relative p-0">
+{#
         <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
             <a href="index.html">
                 <img src="img/iit-logo.png" style="width: 250px;height: 75px;">
@@ -69,7 +70,9 @@
 
                 <a href="https://htmlcodex.com/startup-company-website-template" class="btn btn-primary py-2 px-4 ms-3">ONIRIX</a>            </div>
         </nav>
+#}
 
+        {{ include('_navbar.html.twig') }}
 
         <div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
             <div class="row py-5">
