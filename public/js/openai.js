@@ -1,10 +1,13 @@
 import Animation from './Animation.js';
+import BlockAnimation from './BlockAnimation.js';
 
 const dreamForm = document.getElementById('dream-form');
 const dream = document.getElementById('dream');
 const predictionResult = document.getElementById('prediction-result');
 // Speed in millisecond, ex : 1000 milliseconds
 const messageDisplaySpeed = 30;
+
+const animationDream = document.getElementById('animation-dream');
 
 const animation = new Animation();
 
@@ -40,3 +43,14 @@ dream.addEventListener('keypress', function(e) {
         });
     }
 });
+
+for (let i = 0; i < 10; i++) {
+    const elementDiv = document.createElement('div');
+    elementDiv.className = "element-div-anim";
+
+    animationDream.appendChild(elementDiv);
+
+    const blockAnimation = new BlockAnimation(elementDiv, animationDream);
+
+    blockAnimation.anim();
+}

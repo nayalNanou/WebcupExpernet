@@ -14,9 +14,9 @@
             <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Nos projets de recherche</a>
                 <div class="dropdown-menu m-0">
-                    <a href="#" class="dropdown-item">FUTURLAB</a>
-                    <a href="{{ path('about_team') }}" class="dropdown-item">EXPANSEDREAM</a>
-                    <a href="#" class="dropdown-item">ONIRIX IA</a>
+                    <a href="{{ path('project_futurlab') }}" class="dropdown-item">FUTURLAB</a>
+                    <a href="{{ path('project_expansedream') }}" class="dropdown-item">EXPANSEDREAM</a>
+                    <a href="{{ path('openai_prediction') }}" class="dropdown-item">ONIRIX IA</a>
                 </div>
             </div>
 
@@ -31,7 +31,7 @@
             <a href="{{ path('about_contact') }}" class="nav-item nav-link">Contact</a>
         </div>
 
-        <a href="https://htmlcodex.com/startup-company-website-template" class="btn btn-primary py-2 px-4 ms-3">ONIRIX</a>
+        <a href="{{ path('openai_prediction') }}" class="btn btn-primary py-2 px-4 ms-3">ONIRIX</a>
     </div>
 </nav>
 

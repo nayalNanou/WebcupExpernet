@@ -65,7 +65,9 @@
                                 
                                 <div class="d-flex mb-2">
                                     <i class="bi bi-geo-alt text-primary me-2"></i>
-                                    <p class="mb-0"><a href="https://goo.gl/maps/AqDi75U5FH8eXAjPA" >4 place Mariage, 97600 Mamoudzou</a></p>
+{#                                    <p class="mb-0"><a href="https://goo.gl/maps/AqDi75U5FH8eXAjPA" >4 place Mariage, 97600 Mamoudzou</a></p> #}
+
+                                        <p class="mb-0"><a href="https://goo.gl/maps/u1fVJGa8eAzNUKLY6" >123 Main Street, Flushing, État de New York, États-Unis</a></p>
                                 </div>
                                 <div class="d-flex mb-2">
                                     <i class="bi bi-envelope-open text-primary me-2"></i>
@@ -87,12 +89,12 @@
                                     <h3 class="text-light mb-0">Liens rapides</h3>
                                 </div>
                                 <div class="link-animated d-flex flex-column justify-content-start">
-                                    <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Accueil</a>
-                                    <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>A propos de nous</a>
+                                    <a class="text-light mb-2" href="{{ path('home_index') }}"><i class="bi bi-arrow-right text-primary me-2"></i>Accueil</a>
+                                    <a class="text-light mb-2" href="{{ path('about_index') }}"><i class="bi bi-arrow-right text-primary me-2"></i>A propos de nous</a>
                                     <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Recherche et développement</a>
                                     <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Psychologie et Neurologie</a>
                                     <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Expertise</a>
-                                    <a class="text-light" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Nous contacter</a>
+                                    <a class="text-light" href="{{ path('about_contact') }}"><i class="bi bi-arrow-right text-primary me-2"></i>Nous contacter</a>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
@@ -100,11 +102,11 @@
                                     <h3 class="text-light mb-0">Liens populaires</h3>
                                 </div>
                                 <div class="link-animated d-flex flex-column justify-content-start">
-                                    <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>ONIRIX</a>
-                                    <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>FUTURLAB</a>
-                                    <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>EXPANSEDREAM</a>
-                                    <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>A propos de nous</a>
-                                    <a class="text-light" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>A propos de nous</a>
+                                    <a class="text-light mb-2" href="{{ path('openai_prediction') }}"><i class="bi bi-arrow-right text-primary me-2"></i>ONIRIX</a>
+                                    <a class="text-light mb-2" href="{{ path('project_futurlab') }}"><i class="bi bi-arrow-right text-primary me-2"></i>FUTURLAB</a>
+                                    <a class="text-light mb-2" href="{{ path('project_expansedream') }}"><i class="bi bi-arrow-right text-primary me-2"></i>EXPANSEDREAM</a>
+                                    <a class="text-light mb-2" href="{{ path('about_index') }}"><i class="bi bi-arrow-right text-primary me-2"></i>A propos de nous</a>
+{#                                    <a class="text-light" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>A propos de nous</a> #}
                                 </div>
                             </div>
                         </div>

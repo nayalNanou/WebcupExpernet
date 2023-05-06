@@ -1,0 +1,114 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark px-5 d-none d-lg-block">
+        <div class="row gx-0">
+            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i><a href="https://goo.gl/maps/AqDi75U5FH8eXAjPA" >4 place Mariage, 97600 Mamoudzou</a></small>
+                    <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i><a href="tel:0782465607">07 82 46 56 07</a> </small>
+                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i><a href="mailto:contact@iidr.com">contact@iidr.com</a></small>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center text-lg-end">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://twitter.com/"><i class="fab fa-twitter fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.facebook.com/"><i class="fab fa-facebook-f fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="linkedin.com/"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.instagram.com/"><i class="fab fa-instagram fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href="https://www.youtube.com/"><i class="fab fa-youtube fw-normal"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative p-0">
+
+
+        {{ include('_navbar.html.twig') }}
+
+        <div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
+            <div class="row py-5">
+                <div class="col-12 pt-lg-5 mt-lg-5 text-center">
+                    <h1 class="display-4 text-white animated zoomIn">EXPANSEDREAM</h1>
+                    <a href="{{ path('home_index') }}" class="h5 text-white">Accueil</a>
+                    <i class="far fa-circle text-white px-2"></i>
+                    <a href="{{ path('about_index') }}" class="h5 text-white">A propos de nous</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Full Screen Search Start -->
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex align-items-center justify-content-center">
+                    <div class="input-group" style="max-width: 600px;">
+                        <input type="text" class="form-control bg-transparent border-primary p-3" placeholder="Type search keyword">
+                        <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Full Screen Search End -->
+
+
+ <!-- FUTURLAB Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-7">
+                    <div class="section-title position-relative pb-3 mb-5">
+                        <h5 class="fw-bold text-primary text-uppercase">Le projet EXPANSEDREAM</h5>
+                        <h1 class="mb-0">Expansedream développé en collaboration avec par notre département de recherche ainsi que nos experts en onirologie</h1>
+                    </div>
+
+                    <p class="mb-4">Le projet Expansedream a été créé dans le but de permettre aux personnes de vivre des rêves lucides de manière plus régulière et plus facile. En expérimentant des rêves en pleine conscience, les individus peuvent explorer leur potentiel intérieur, découvrir de nouvelles possibilités de vie et améliorer leur bien-être mental et physique.
+                </p>
+                </br>
+                <p>
+                    Les objectifs principaux du projet Expansedream sont les suivants :
+                </p>
+                <ul>
+                    <li>Développer une technologie innovante pour faciliter l'induction de rêves lucides</li>
+                    <li>Mettre à disposition des utilisateurs une interface conviviale pour enregistrer leurs rêves et les analyser</li>
+                    <li>Créer une communauté de pratiquants de rêves lucides pour partager des expériences et des connaissances</li>
+                    <li>Encourager la recherche scientifique sur les rêves lucides et leur impact sur la santé mentale et physique</li>
+                </ul>
+
+                <p>
+Le projet Expansedream est une initiative passionnante qui vise à encourager la pratique des rêves lucides et à explorer les possibilités qu'ils offrent pour améliorer notre bien-être. En offrant une technologie innovante, une interface utilisateur conviviale et une communauté de soutien, le projet Expansedream a le potentiel de changer la façon dont nous voyons nos rêves et d'ouvrir de nouvelles perspectives sur la vie.
+                </p>
+                   </div>
+                <div class="col-lg-5" style="min-height: 500px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="{{ asset('img/reve-lucide.jpg') }}" style="object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FUTURLAB End -->
+
+    
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
+{% endblock %}

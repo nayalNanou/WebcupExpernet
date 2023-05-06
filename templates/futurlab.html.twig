@@ -1,0 +1,106 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark px-5 d-none d-lg-block">
+        <div class="row gx-0">
+            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i><a href="https://goo.gl/maps/AqDi75U5FH8eXAjPA" >4 place Mariage, 97600 Mamoudzou</a></small>
+                    <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i><a href="tel:0782465607">07 82 46 56 07</a> </small>
+                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i><a href="mailto:contact@iidr.com">contact@iidr.com</a></small>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center text-lg-end">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://twitter.com/"><i class="fab fa-twitter fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.facebook.com/"><i class="fab fa-facebook-f fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="linkedin.com/"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href="https://www.instagram.com/"><i class="fab fa-instagram fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href="https://www.youtube.com/"><i class="fab fa-youtube fw-normal"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative p-0">
+
+
+        {{ include('_navbar.html.twig') }}
+
+        <div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
+            <div class="row py-5">
+                <div class="col-12 pt-lg-5 mt-lg-5 text-center">
+                    <h1 class="display-4 text-white animated zoomIn">FUTURLAB</h1>
+                    <a href="{{ path('home_index') }}" class="h5 text-white">Accueil</a>
+                    <i class="far fa-circle text-white px-2"></i>
+                    <a href="{{ path('about_index') }}" class="h5 text-white">A propos de nous</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Full Screen Search Start -->
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex align-items-center justify-content-center">
+                    <div class="input-group" style="max-width: 600px;">
+                        <input type="text" class="form-control bg-transparent border-primary p-3" placeholder="Type search keyword">
+                        <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Full Screen Search End -->
+
+
+ <!-- FUTURLAB Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-7">
+                    <div class="section-title position-relative pb-3 mb-5">
+                        <h5 class="fw-bold text-primary text-uppercase">Le projet FUTURLAB</h5>
+                        <h1 class="mb-0">FUTURLAB est un projet ambitieux qui vise à permettre la visualisation physique et caractériel de l'inconscient d'un individu</h1>
+                    </div>
+                    <p class="mb-4">En effet l'objectif et pouvoir révéler ce qu'un utilisateur souhaiterait devenir au fond de lui-même. Pour ce faire, notre équipe de chercheurs travaille à la conception d'un appareil de haute technologie capable de capturer les signaux électriques du cerveau d'un individu et de les traduire en images et en sons.
+
+Notre objectif est de permettre aux individus de mieux comprendre leur propre psyché, en révélant leurs désirs et leurs aspirations profondes. Nous croyons que cette compréhension accrue de soi peut aider les gens à mieux se connaître et à atteindre leurs objectifs personnels.
+
+
+                </p>
+                <p>Le projet FUTURLAB présente également des implications pour le domaine de la psychologie et de la neuroscience. En effet, en permettant la visualisation de l'inconscient, notre appareil pourrait aider les professionnels de la santé mentale à mieux comprendre les troubles psychologiques et à élaborer des traitements plus efficaces. </p>
+                        L’Institut International des Rêves est une organisation hybride et indépendante au service de l’intérêt général. Il dispose d’un Conseil d’Administration, composé notamment de membres de l’institut et de représentants élus. Il prend les décisions importantes de l'organisation.
+                    </p>
+                   </div>
+                <div class="col-lg-5" style="min-height: 500px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="{{ asset('img/futurlab.jpg') }}" style="object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FUTURLAB End -->
+
+    
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
+{% endblock %}

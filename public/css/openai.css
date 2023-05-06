@@ -60,7 +60,11 @@ section p {
 }
 
 .container-prediction {
+    margin-bottom: 20px;
     min-height: 200px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
 }
 
 .prediction-result {
@@ -70,4 +74,31 @@ section p {
 
 .navbar-dark {
     background: #00002F;
+}
+
+.onirix-gif {
+    height: 300px;
+}
+
+.ia-oniris-presentation {
+    margin-bottom: 40px;
+}
+
+.animation-dream {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 70%;
+    background: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    border-radius: 20px;
+    transition-property: background-color;
+    transition-duration: 800ms;
+    transition-timing-function: linear;
+}
+
+.element-div-anim {
+    border-radius: 100px;
+    border: 1px solid black;
 }
