@@ -1,0 +1,66 @@
+
+#page-generate-prediction {
+    width: 80%;
+    margin: auto;
+
+    --border-color: #EFEFEF;
+}
+
+.div-header-discover-onirix {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.div-header-discover-onirix div {
+    padding: 30px 0px;
+    min-width: 300px;
+    width: 46%;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 220px;
+}
+
+.div-header-discover-onirix .text p {
+    font-size: 3em;
+    text-align: center;
+}
+
+section p {
+    font-size: 1.8em;
+    line-height: 1.6em;
+}
+
+.dream-form {
+}
+
+.dream-form label {
+    display: block;
+    font-size: 2em;
+    margin-bottom: 16px;
+}
+
+.dream-form .dream-textarea {
+    width: 98%;
+    padding: 20px;
+    min-height: 200px;
+    font-size: 1.8em;
+    display: block;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid #E0E0E0;
+    margin: auto;
+}
+
+.container-prediction {
+    min-height: 400px;
+}
+
+.prediction-result {
+    font-size: 1.8em;
+    line-height: 1.6em;
+}
