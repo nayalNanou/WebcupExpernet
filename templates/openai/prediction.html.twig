@@ -4,33 +4,33 @@
     <link rel="stylesheet" href="{{ asset('css/openai.css') }}" />   
 {% endblock %}
 
-{% block body %}
-    <div id="page-generate-prediction">
-        <div class="div-header-discover-onirix">
-            <div class="text">
-                <p>Découvrez notre IA ONIRIX</p>
-            </div>
-            <div class="image">
-                <img src="{{ asset('images/onirix2.png') }}" alt="openai logo" class="openai-logo" />
-            </div>
-        </div>
-
-        <section>
-            <p>95% de nos statisques se sont réalisées. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum felis ante, facilisis suscipit lacus at, sollicitudin placerat dui.</p>
-
-            <form class="dream-form" id="dream-form" method="post" action="">
-                <label for="dream">Générer une prédiction à partir d'un rêve</label>
-                <textarea placeholder="J'ai rêvé que j'étais dans une grande ville animée, avec des lumières brillantes et des gratte-ciel imposants qui s'élevaient tout autour de moi..." class="dream-textarea" name="dream" id="dream"></textarea>
-            </form>
-        </section>
-
-        <div class="container-prediction" id="prediction">
-            <p class="prediction-result" id="prediction-result"></p>
-        </div>
-    <div>
+{% block javascripts %}
+    <script src="{{ asset('js/openai.js') }}"></script>
 {% endblock %}
 
-{% block javascripts %}
-    <script type="module" src="{{ asset('js/openai.js') }}"></script>
+{% block body %}
+    <header>
+        <div>
+            <p>Découvrez notre IA ONIRIX</p>
+        </div>
+        <div>
+            <img src="{{ asset('images/onirix.png') }}" alt="openai logo" class="openai-logo" />
+        </div>
+    </header>
+
+    <section>
+        <p>95% de nos statisques se sont réaliser</p>
+
+        <p>Générer une prédiction à partir d'un rêve</p>
+
+        <form id="dream-form" method="post" action="">
+            <textarea name="dream" id="dream"></textarea>
+            <button type="submit">Générer</button>
+        </form>
+    </section>
+
+    <div id="prediction">
+        <p id="prediction-result"></p>
+    </div>
 {% endblock %}
 
