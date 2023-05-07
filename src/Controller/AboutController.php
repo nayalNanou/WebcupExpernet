@@ -31,4 +31,22 @@ class AboutController extends AbstractController
     {
         return $this->render('service.html.twig');
     }
+
+    #[Route("/searchdevelopement", name: "search_developement")]
+    public function searchdevelopement()
+    {
+        return $this->render('searchdevelopement.html.twig');
+    }
+
+    #[Route("/mentionslegales", name: "mentions_legales")]
+    public function mentionslegales()
+    {
+        return $this->render('mentionslegales.html.twig');
+    }
+
+    #[Route("/politiqueconfidentialite", name: "politique_confidentialite")]
+    public function politiqueconfidentialite()
+    {
+        return $this->render('politiqueconfidentialite.html.twig');
+    }
 }
