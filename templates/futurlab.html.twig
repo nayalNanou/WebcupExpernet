@@ -10,6 +10,7 @@
 
     <!-- Topbar Start -->
     <div class="container-fluid bg-dark px-5 d-none d-lg-block">
+{#
         <div class="row gx-0">
             <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
@@ -28,6 +29,8 @@
                 </div>
             </div>
         </div>
+#}
+        {{ include('_coordonnee_top_bar.html.twig') }}
     </div>
     <!-- Topbar End -->
 
@@ -38,7 +41,7 @@
 
         {{ include('_navbar.html.twig') }}
 
-        <div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
+        <div class="container-fluid bg-primary py-5 bg-header">
             <div class="row py-5">
                 <div class="col-12 pt-lg-5 mt-lg-5 text-center">
                     <h1 class="display-4 text-white animated zoomIn">FUTURLAB</h1>
@@ -96,6 +99,7 @@ Notre objectif est de permettre aux individus de mieux comprendre leur propre ps
                     </div>
                 </div>
             </div>
+            <a href="{{ path('about_contact') }}" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Prendre rendez-vous</a>
         </div>
     </div>
     <!-- FUTURLAB End -->

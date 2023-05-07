@@ -6,15 +6,21 @@ const dream = document.getElementById('dream');
 const predictionResult = document.getElementById('prediction-result');
 // Speed in millisecond, ex : 1000 milliseconds
 const messageDisplaySpeed = 30;
+const buttonGeneratePrediction = document.getElementById('button-generate-prediction');
 
 const animationDream = document.getElementById('animation-dream');
 
 const animation = new Animation();
 
-dream.addEventListener('keypress', function(e) {
+// dream.addEventListener('keypress', function(e) {
+dreamForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+});
+
+buttonGeneratePrediction.addEventListener('click', function(e) {
     predictionResult.innerHTML = "";
 
-    if (e.keyCode == 13) {
+//    if (e.keyCode == 13) {
         this.blur();
         const formData = new FormData();
         formData.append('dream', dream.value);
@@ -36,15 +42,17 @@ dream.addEventListener('keypress', function(e) {
             if (typeof response == "string") {
                 predictionResult.innerHTML = response;
             } else {
+                animationDream.style.opacity = 0;
+
                 let predictionMessage = response.choices[0].message.content;
 
                 animation.displayTextGradually(predictionResult, predictionMessage, messageDisplaySpeed);
             }
         });
-    }
+//    }
 });
 
-for (let i = 0; i < 10; i++) {
+for (let i = 0; i < 16; i++) {
     const elementDiv = document.createElement('div');
     elementDiv.className = "element-div-anim";
 

@@ -5,37 +5,56 @@ class BlockAnimation {
         this.toolbox = new Toolbox();
         this.element = element;
         this.parentDiv = parentDiv;
-        this.speed = this.toolbox.rand(0.2, 1.5);
-        this.positionLeft = this.toolbox.rand(0, parentDiv.offsetWidth);
-        this.positionTop = this.toolbox.rand(0, parentDiv.offsetHeight);
-        this.elementWidth = this.toolbox.rand(20, 100, true);
-        this.elementHeight = this.toolbox.rand(20, 100, true);
+        this.minSpeed = 0.2;
+        this.maxSpeed = 1.5;
+        this.minOpacity = 0.1;
+        this.maxOpacity = 1;
+        this.minSize = 10;
+        this.maxSize = 100;
 
-        this.element.style.width = this.elementWidth + 'px';
-        this.element.style.height = this.elementHeight + 'px';
+        this.speed = this.toolbox.rand(this.minSpeed, this.maxSpeed);
+        this.elementSize = this.toolbox.rand(this.minSize, this.maxSize, true);
+        this.positionLeft = this.toolbox.rand(0, this.parentDiv.offsetWidth - this.elementSize);
+        this.positionTop = this.toolbox.rand(0, this.parentDiv.offsetHeight - this.elementSize);
+
+        this.element.style.width = this.elementSize + 'px';
+        this.element.style.height = this.elementSize + 'px';
+
         this.element.style.top = this.positionTop + 'px';
+        this.element.style.left = this.positionLeft + 'px';
+
         this.element.style.background = this.toolbox.randColorRgb();
-        this.parentDiv.style.background = this.toolbox.randColorRgb(170, 255);
+        this.element.style.opacity = this.toolbox.rand(this.minOpacity, this.maxOpacity);
 
         this.element.style.position = "absolute";
     }
 
     anim() {
-        const maxHeight = this.parentDiv.offsetHeight;
-        const maxWidth = this.parentDiv.offsetWidth;
+        if (this.positionLeft > (this.parentDiv.offsetWidth - this.elementSize)) {
+            let elementOpacity = this.element.style.opacity;
+            this.element.style.opacity = elementOpacity - 0.05;
 
-        if (this.positionLeft >= maxWidth) {
-            this.positionLeft = 0;
-            this.positionTop = this.toolbox.rand(0, maxHeight);
-            this.element.style.top = this.positionTop + 'px';
-            this.element.style.background = this.toolbox.randColorRgb();
+            if (this.element.style.opacity > 0) {
+                window.requestAnimationFrame(function() {
+                    this.anim();
+                }.bind(this));
 
-            this.speed = this.toolbox.rand(0.2, 1.5);
-            this.parentDiv.style.background = this.toolbox.randColorRgb(170, 255);
+                return;
+            } else {
+                this.element.style.opacity = 1;
+
+                this.speed = this.toolbox.rand(this.minSpeed, this.maxSpeed);
+                this.elementSize = this.toolbox.rand(this.minSize, this.maxSize, true);
+                this.positionLeft = 0;
+                this.positionTop = this.toolbox.rand(0, this.parentDiv.offsetHeight - this.elementSize);
+                this.element.style.opacity = this.toolbox.rand(this.minOpacity, this.maxOpacity);
+
+                this.element.style.left = this.positionLeft + 'px';
+                this.element.style.top = this.positionTop + 'px';
+            }
         }
 
         this.positionLeft += this.speed;
-
         this.element.style.left = this.positionLeft + 'px';
 
         window.requestAnimationFrame(function() {

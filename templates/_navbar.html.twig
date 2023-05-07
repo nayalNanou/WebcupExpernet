@@ -11,31 +11,18 @@
             <a href="{{ path('home_index') }}" class="nav-item nav-link active">Accueil</a>
             <a href="{{ path('about_index') }}" class="nav-item nav-link">A propos de nous</a>
 
+            <a href="{{ path('about_search_developement') }}" class="nav-item nav-link">Département R&D</a>
             <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Nos projets de recherche</a>
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Nos projets</a>
                 <div class="dropdown-menu m-0">
                     <a href="{{ path('project_futurlab') }}" class="dropdown-item">FUTURLAB</a>
                     <a href="{{ path('project_expansedream') }}" class="dropdown-item">EXPANSEDREAM</a>
                     <a href="{{ path('openai_prediction') }}" class="dropdown-item">ONIRIX IA</a>
                 </div>
             </div>
-
-{#
-            <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Départements</a>
-                <div class="dropdown-menu m-0">
-                    <a href="#" class="dropdown-item">Recherche et développement</a>
-                    <a href="#" class="dropdown-item">Pshychologie et Neurologie</a>
-                    <a href="{{ path('about_team') }}" class="dropdown-item">Expertise</a>
-                </div>
-            </div>
-#}
-
-            <a href="{{ path('about_search_developement') }}" class="nav-item nav-link">Département R&D</a>
             <a href="{{ path('about_contact') }}" class="nav-item nav-link">Contact</a>
         </div>
 
         <a href="{{ path('openai_prediction') }}" class="btn btn-primary py-2 px-4 ms-3">ONIRIX</a>
     </div>
 </nav>
-

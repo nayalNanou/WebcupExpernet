@@ -7,7 +7,20 @@
 {% endblock %}
 
 {% block body %}
-    {{ include('_navbar.html.twig') }}
+    <div class="container-fluid position-relative p-0">
+        {{ include('_navbar.html.twig') }}
+
+        <div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
+            <div class="row py-5">
+                <div class="col-12 pt-lg-5 mt-lg-5 text-center">
+                    <h1 class="display-4 text-white animated zoomIn">IA ONIRIX</h1>
+                    <a href="{{ path('home_index') }}" class="h5 text-white">Accueil</a>
+                    <i class="far fa-circle text-white px-2"></i>
+                    <a href="{{ path('about_index') }}" class="h5 text-white">A propos de nous</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div id="page-generate-prediction">
         <div class="div-header-discover-onirix">
@@ -19,14 +32,19 @@
             </div>
         </div>
 
-        <section>
-            <p class="ia-oniris-presentation">Je suis l'IA Oniris, une intelligence artificielle de pointe capable d'analyser les rêves et de fournir des prédictions précises sur l'avenir. Je suis équipé d'une base de données massive de rêves et de leur signification, ainsi que d'un algorithme de prédiction de pointe qui utilise des modèles statistiques et des réseaux de neurones profonds pour générer des prévisions fiables à partir des rêves. Que ce soit pour obtenir des conseils sur les affaires, l'amour ou la santé, l'IA Oniris est là pour vous aider à décrypter les messages cachés dans vos rêves et à vous guider vers un avenir meilleur.</p>
+        <section class="section-generate-prediction">
+            <p class="ia-oniris-presentation">Je suis l'IA Onirix, une intelligence artificielle de pointe capable d'analyser les rêves et de fournir des prédictions précises sur l'avenir. Je suis équipé d'une base de données massive de rêves et de leur signification, ainsi que d'un algorithme de prédiction de pointe qui utilise des modèles statistiques et des réseaux de neurones profonds pour générer des prévisions fiables à partir des rêves. Que ce soit pour obtenir des conseils sur les affaires, l'amour ou la santé, l'IA Onirix est là pour vous aider à décrypter les messages cachés dans vos rêves et à vous guider vers un avenir meilleur.</p>
 
-            <p>Décriver votre rêve de la manière la libre possible :</p>
+            <div class="container-dream-form">
+                <form class="dream-form" id="dream-form" method="post" action="">
 
-            <form class="dream-form" id="dream-form" method="post" action="">
-                <textarea placeholder="Je rêvais j'étais sur une île deserte..." class="dream-textarea" name="dream" id="dream"></textarea>
-            </form>
+                    <label for="dream">Décriver votre rêve avec la manière la plus libre possible :</label>
+                    <textarea placeholder="Ex: Je me souviens encore de mon rêve étrange de cette nuit. Tout était flou et confus, comme si je regardais à travers un filtre de fumée..." class="dream-textarea" name="dream" id="dream"></textarea>
+                    <button id="button-generate-prediction" class="button-generate-prediction btn btn-primary py-2 px-4" type="submit">Générer une prédiction</button>
+                </form>
+
+                <a class="image-cauchemar-gif" href="{{ path('about_contact') }}"><img src="{{ asset("images/Vos_cauchemars_vous_gachent_la_vie.gif") }}" alt="cauchemars" /></a>
+            </div>
         </section>
 
         <div class="container-prediction" id="prediction">
@@ -34,6 +52,16 @@
             <p class="prediction-result" id="prediction-result"></p>
 
             <img class="onirix-gif" src="{{ asset("images/eye_dribbble.gif") }}" alt="Onirix" />
+        </div>
+
+        <div class="container-participer-conferences">
+            <h2>PARTICIPEZ À NOS CONFÉRENCES</h2>
+            <p>Qu'il s'agisse d'une conférence ponctuelle, d'un cycle de conférences prospectives, de tables rondes ou de tout autre format enrichi de mini-ateliers interactifs, nous composons la meilleure curation pour répondre à vos questionnements.<br />Au-delè de nos propres interventions, l'IIR bénéfie de la force de plusieurs expertes et experts, chercheurs, ... pionnières et pionniers dans leur domaine, mobilisés sur le sujet et prêts à vous inviter à :</p>
+            <ul>
+                <li>Changer de regard sur l'époque et sur le monde</li>
+                <li>Changer de posture vis-à-vis de demain</li>
+                <li>Provoquer l'envie d'agir autrement</li>
+            </ul>
         </div>
     </div>
 

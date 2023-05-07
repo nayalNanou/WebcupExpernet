@@ -1,11 +1,11 @@
 
 #page-generate-prediction {
-    width: 80%;
+    width: 85%;
     margin: auto;
 
     --border-color: #EFEFEF;
 
-    margin-top: 200px;
+    margin-top: 10px;
 }
 
 .div-header-discover-onirix {
@@ -39,6 +39,7 @@ section p {
 }
 
 .dream-form {
+    width: 60%;
 }
 
 .dream-form label {
@@ -50,7 +51,7 @@ section p {
 .dream-form .dream-textarea {
     width: 98%;
     padding: 20px;
-    min-height: 200px;
+    min-height: 400px;
     font-size: 1.8em;
     display: block;
     border-radius: 10px;
@@ -82,23 +83,54 @@ section p {
 
 .ia-oniris-presentation {
     margin-bottom: 40px;
+    font-size: 1.4em;
 }
 
 .animation-dream {
+    opacity: 0.2;
     position: absolute;
     left: 0px;
-    top: 0px;
-    height: 100%;
-    width: 70%;
-    background: rgba(0, 0, 0, 0.5);
+    top: 20px;
+    height: 90%;
+    width: 50%;
+    background: white;
     overflow: hidden;
-    border-radius: 20px;
-    transition-property: background-color;
-    transition-duration: 800ms;
+    transition-property: opacity;
+    transition-duration: 300ms;
     transition-timing-function: linear;
 }
 
 .element-div-anim {
     border-radius: 100px;
-    border: 1px solid black;
+}
+
+.container-participer-conferences {
+    margin-top: 100px;
+}
+
+.button-generate-prediction {
+    margin: auto;
+    display: block;
+    height: 60px;
+    font-size: 1.4em;
+}
+
+.section-generate-prediction {
+    margin-bottom: 40px;
+}
+
+.ia-header-image {
+    width: 100%;
+    display: block;
+}
+
+.container-dream-form {
+    display: flex;
+    justify-content: space-between;
+    flex: wrap;
+    align-items: flex-end;
+}
+
+.image-cauchemar-gif {
+    display: block;
 }
